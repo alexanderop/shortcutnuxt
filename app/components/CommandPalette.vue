@@ -133,9 +133,9 @@ function getIconForCommand(command: KeyboardShortcut) {
         @keydown="onKeyDown"
       >
         <!-- Search Input -->
-        <div class="border-b border-zinc-800">
+        <div class="border-b border-gray-200 dark:border-zinc-800">
           <div class="px-4 flex gap-3 items-center">
-            <div class="i-carbon-search text-zinc-400 h-4 w-4" />
+            <div class="i-carbon-search text-gray-500 h-4 w-4 dark:text-zinc-400" />
             <input
               ref="searchInput"
               v-model="searchQuery"
@@ -182,7 +182,7 @@ function getIconForCommand(command: KeyboardShortcut) {
                   </div>
                   <div
                     v-if="command.description"
-                    class="text-xs text-zinc-500 mt-0.5"
+                    class="text-xs text-gray-500 mt-0.5 dark:text-zinc-500"
                   >
                     {{ command.description }}
                   </div>
@@ -203,7 +203,7 @@ function getIconForCommand(command: KeyboardShortcut) {
         </div>
 
         <!-- Footer -->
-        <div class="text-xs px-4 py-3 border-t border-zinc-800 flex items-center justify-between" text-muted>
+        <div class="text-xs px-4 py-3 border-t border-gray-200 flex items-center justify-between dark:border-zinc-800" text-muted>
           <div class="flex gap-4 items-center">
             <span class="flex gap-1 items-center">
               <kbd kbd-key>↑</kbd>

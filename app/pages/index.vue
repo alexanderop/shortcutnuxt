@@ -39,7 +39,7 @@ function openShortcutDialog() {
           </div>
         </button>
         <button
-          class="px-6 py-3 border border-zinc-700 rounded-lg flex gap-2 transition-colors items-center hover:bg-zinc-800/50"
+          class="px-6 py-3 border border-gray-300 rounded-lg flex gap-2 transition-colors items-center dark:border-zinc-700 hover:bg-gray-100 dark:hover:bg-zinc-800/50"
           text-secondary
           @click="openShortcutDialog"
         >
@@ -66,7 +66,7 @@ function openShortcutDialog() {
           Press <kbd kbd-key>⌘K</kbd> (or <kbd kbd-key>Ctrl+K</kbd> on Windows) to open the command palette.
           Search through all available actions, navigate with arrow keys, and execute with Enter.
         </p>
-        <div class="p-4 border border-zinc-800 rounded-lg bg-zinc-900/50">
+        <div class="p-4 border border-gray-200 rounded-lg bg-gray-50 dark:border-zinc-800 dark:bg-zinc-900/50">
           <div class="text-sm font-medium mb-2" text-primary>
             Try it now:
           </div>
@@ -92,7 +92,7 @@ function openShortcutDialog() {
           Use Gmail-style key sequences for rapid navigation. Press keys in sequence
           (not simultaneously) to trigger actions.
         </p>
-        <div class="p-4 border border-zinc-800 rounded-lg bg-zinc-900/50">
+        <div class="p-4 border border-gray-200 rounded-lg bg-gray-50 dark:border-zinc-800 dark:bg-zinc-900/50">
           <div class="text-sm font-medium mb-2" text-primary>
             Navigation sequences:
           </div>
@@ -124,7 +124,7 @@ function openShortcutDialog() {
         Quick Actions
       </h2>
       <div class="gap-6 grid md:grid-cols-3">
-        <div class="p-6 text-center border border-zinc-800 rounded-xl bg-zinc-900/30 transition-colors hover:bg-zinc-800/30">
+        <div class="p-6 text-center border border-gray-200 rounded-xl bg-gray-50 transition-colors dark:border-zinc-800 dark:bg-zinc-900/30 hover:bg-gray-100 dark:hover:bg-zinc-800/30">
           <div class="mx-auto mb-4 rounded-xl bg-blue-500/10 flex h-12 w-12 items-center justify-center">
             <div class="i-carbon-search text-blue-400 h-6 w-6" />
           </div>
@@ -137,7 +137,7 @@ function openShortcutDialog() {
           <kbd kbd-key>S</kbd>
         </div>
 
-        <div class="p-6 text-center border border-zinc-800 rounded-xl bg-zinc-900/30 transition-colors hover:bg-zinc-800/30">
+        <div class="p-6 text-center border border-gray-200 rounded-xl bg-gray-50 transition-colors dark:border-zinc-800 dark:bg-zinc-900/30 hover:bg-gray-100 dark:hover:bg-zinc-800/30">
           <div class="mx-auto mb-4 rounded-xl bg-amber-500/10 flex h-12 w-12 items-center justify-center">
             <div class="i-carbon-sun text-amber-400 h-6 w-6" />
           </div>
@@ -150,7 +150,7 @@ function openShortcutDialog() {
           <kbd kbd-key>T</kbd>
         </div>
 
-        <div class="p-6 text-center border border-zinc-800 rounded-xl bg-zinc-900/30 transition-colors hover:bg-zinc-800/30">
+        <div class="p-6 text-center border border-gray-200 rounded-xl bg-gray-50 transition-colors dark:border-zinc-800 dark:bg-zinc-900/30 hover:bg-gray-100 dark:hover:bg-zinc-800/30">
           <div class="mx-auto mb-4 rounded-xl bg-green-500/10 flex h-12 w-12 items-center justify-center">
             <div class="i-carbon-help text-green-400 h-6 w-6" />
           </div>
@@ -188,21 +188,21 @@ function openShortcutDialog() {
             </h3>
             <p class="mb-4" text-secondary>
               The first hurdle: how do you listen for keyboard events <em>everywhere</em> in your app without performance penalties?
-              Native <code class="text-teal-400 px-2 py-0.5 rounded bg-zinc-800">addEventListener</code> can be clunky and memory-leaky.
+              Native <code class="text-teal-500 px-2 py-0.5 rounded bg-gray-200 dark:text-teal-400 dark:bg-zinc-800">addEventListener</code> can be clunky and memory-leaky.
             </p>
-            <div class="mb-4 p-4 border border-zinc-800 rounded-lg bg-zinc-900/50">
-              <div class="text-sm text-zinc-300 font-mono">
-                <div class="text-zinc-500">
+            <div class="mb-4 p-4 border border-gray-200 dark:border-zinc-800 rounded-lg bg-gray-50 dark:bg-zinc-900/50">
+              <div class="text-sm text-gray-700 font-mono dark:text-zinc-300">
+                <div class="text-gray-500 dark:text-zinc-500">
                   // ❌ Naive approach - manual cleanup required
                 </div>
                 <div>document.addEventListener('keydown', handler)</div>
-                <div class="text-zinc-500">
+                <div class="text-gray-500 dark:text-zinc-500">
                   // Must remember to removeEventListener...
                 </div>
               </div>
             </div>
             <p class="mb-4" text-secondary>
-              Our solution leverages VueUse's <code class="text-teal-400 px-2 py-0.5 rounded bg-zinc-800">useMagicKeys</code>, which provides:
+              Our solution leverages VueUse's <code class="text-teal-500 px-2 py-0.5 rounded bg-gray-200 dark:text-teal-400 dark:bg-zinc-800">useMagicKeys</code>, which provides:
             </p>
             <ul class="mb-4 list-disc list-inside space-y-2" text-secondary>
               <li><strong>Automatic cleanup</strong> when components unmount</li>
@@ -210,9 +210,9 @@ function openShortcutDialog() {
               <li><strong>Combo support</strong> like <kbd kbd-key>Cmd+K</kbd> out of the box</li>
               <li><strong>Cross-browser compatibility</strong> handling</li>
             </ul>
-            <div class="p-4 border border-zinc-800 rounded-lg bg-zinc-900/50">
-              <div class="text-sm text-zinc-300 font-mono">
-                <div class="text-zinc-500">
+            <div class="p-4 border border-gray-200 rounded-lg bg-gray-50 dark:border-zinc-800 dark:bg-zinc-900/50">
+              <div class="text-sm text-gray-700 font-mono dark:text-zinc-300">
+                <div class="text-gray-500 dark:text-zinc-500">
                   // ✅ VueUse approach - declarative and clean
                 </div>
                 <div><span class="text-purple-400">const</span> keys = <span class="text-blue-400">useMagicKeys</span>()</div>
@@ -233,9 +233,9 @@ function openShortcutDialog() {
               Nothing ruins UX like shortcuts firing when you're typing in a form field. The challenge is detecting
               when the user is "inputting" vs "navigating" without hardcoding every possible input type.
             </p>
-            <div class="mb-4 p-4 border border-zinc-800 rounded-lg bg-zinc-900/50">
-              <div class="text-sm text-zinc-300 font-mono">
-                <div class="text-zinc-500">
+            <div class="mb-4 p-4 border border-gray-200 dark:border-zinc-800 rounded-lg bg-gray-50 dark:bg-zinc-900/50">
+              <div class="text-sm text-gray-700 font-mono dark:text-zinc-300">
+                <div class="text-gray-500 dark:text-zinc-500">
                   // Smart context detection
                 </div>
                 <div><span class="text-purple-400">const</span> isInputFocused = () => {</div>
@@ -264,16 +264,16 @@ function openShortcutDialog() {
               The trickiest part: implementing Gmail-style sequences like <kbd kbd-key>G</kbd> → <kbd kbd-key>H</kbd>.
               You need to track partial sequences, handle timeouts, and reset state appropriately.
             </p>
-            <div class="mb-4 p-4 border border-zinc-800 rounded-lg bg-zinc-900/50">
-              <div class="text-sm text-zinc-300 font-mono">
-                <div class="text-zinc-500">
+            <div class="mb-4 p-4 border border-gray-200 dark:border-zinc-800 rounded-lg bg-gray-50 dark:bg-zinc-900/50">
+              <div class="text-sm text-gray-700 font-mono dark:text-zinc-300">
+                <div class="text-gray-500 dark:text-zinc-500">
                   // Custom sequence detection logic
                 </div>
                 <div><span class="text-purple-400">export function</span> <span class="text-blue-400">useMagicSequence</span>(keys: <span class="text-yellow-400">string[]</span>) {</div>
                 <div>  <span class="text-purple-400">const</span> sequenceIndex = <span class="text-blue-400">ref</span>(<span class="text-orange-400">0</span>)</div>
                 <div>  <span class="text-purple-400">const</span> success = <span class="text-blue-400">ref</span>(<span class="text-orange-400">false</span>)</div>
                 <div class="mt-2">
-                  <span class="text-zinc-500">// Watch for key presses and advance sequence</span>
+                  <span class="text-gray-500 dark:text-zinc-500">// Watch for key presses and advance sequence</span>
                 </div>
                 <div>  <span class="text-blue-400">watch</span>(current, () => {</div>
                 <div>    <span class="text-purple-400">if</span> (current.has(targetKey)) {</div>
@@ -308,9 +308,9 @@ function openShortcutDialog() {
               The final piece: making shortcuts discoverable and manageable at scale. Rather than scattered
               event listeners, we centralize everything in a typed command registry.
             </p>
-            <div class="mb-4 p-4 border border-zinc-800 rounded-lg bg-zinc-900/50">
-              <div class="text-sm text-zinc-300 font-mono">
-                <div class="text-zinc-500">
+            <div class="mb-4 p-4 border border-gray-200 dark:border-zinc-800 rounded-lg bg-gray-50 dark:bg-zinc-900/50">
+              <div class="text-sm text-gray-700 font-mono dark:text-zinc-300">
+                <div class="text-gray-500 dark:text-zinc-500">
                   // Centralized command registry
                 </div>
                 <div><span class="text-purple-400">interface</span> <span class="text-yellow-400">KeyboardShortcut</span> {</div>
@@ -329,7 +329,7 @@ function openShortcutDialog() {
           </div>
 
           <!-- Performance Note -->
-          <div class="bg-gradient-to-r p-6 border border-zinc-800 rounded-lg from-blue-500/10 to-purple-500/10">
+          <div class="bg-gradient-to-r p-6 border border-gray-200 rounded-lg from-blue-500/10 to-purple-500/10 dark:border-zinc-800">
             <h4 class="text-lg font-semibold mb-3 flex gap-2 items-center" text-primary>
               <div class="i-carbon-dashboard text-blue-400 h-5 w-5" />
               Performance Considerations
@@ -374,7 +374,7 @@ function openShortcutDialog() {
     </div>
 
     <!-- Call to Action -->
-    <div class="bg-gradient-to-r mt-16 p-8 text-center border border-zinc-800 rounded-2xl from-teal-500/10 to-purple-500/10">
+    <div class="bg-gradient-to-r mt-16 p-8 text-center border border-gray-200 rounded-2xl from-teal-500/10 to-purple-500/10 dark:border-zinc-800">
       <h2 class="text-2xl font-bold mb-4" text-primary>
         Ready to Get Started?
       </h2>

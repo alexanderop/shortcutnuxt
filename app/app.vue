@@ -26,9 +26,18 @@ body,
   height: 100vh;
   margin: 0;
   padding: 0;
+  background-color: white;
+  color: #1f2937;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
-html.dark {
+html.dark,
+html.dark body,
+html.dark #__nuxt {
+  background-color: #0f0f0f;
+  color: #f4f4f5;
   color-scheme: dark;
 }
 </style>
