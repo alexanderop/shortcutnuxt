@@ -1,9 +1,13 @@
 <script setup lang="ts">
+import { provideGlobalShortcuts } from '~/composables/useKeyboardShortcuts'
 import { appName } from '~/constants'
 
 useHead({
   title: appName,
 })
+
+// Initialize global keyboard shortcuts
+provideGlobalShortcuts()
 </script>
 
 <template>
@@ -11,6 +15,8 @@ useHead({
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
+  <ShortcutDialog />
+  <CommandPalette />
 </template>
 
 <style>
