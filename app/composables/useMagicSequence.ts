@@ -1,6 +1,4 @@
 import type { ComputedRef } from 'vue'
-import { useMagicKeys } from '@vueuse/core'
-import { computed, ref, watch } from 'vue'
 
 /**
  * A composable that listens for a specific sequence of key presses.

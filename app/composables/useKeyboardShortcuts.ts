@@ -1,5 +1,3 @@
-import { useMagicKeys, whenever } from '@vueuse/core'
-import { ref, watchEffect } from 'vue'
 import { useMagicSequence } from './useMagicSequence'
 
 export interface KeyboardShortcut {

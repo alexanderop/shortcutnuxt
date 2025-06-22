@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { KeyboardShortcut } from '~/composables/useKeyboardShortcuts'
-import { computed, nextTick, ref, watch } from 'vue'
 import { isCommandPaletteOpen, useKeyboardShortcuts } from '~/composables/useKeyboardShortcuts'
 
 const searchQuery = ref('')
